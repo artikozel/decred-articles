@@ -1,4 +1,4 @@
-## Szczegółowa analiza odporności na rozszczepienie łańcucha sieci Decred
+## Szczegółowa analiza odporności na rozszczepienie łańcucha sieci Decred, aut. Noah Pierau
 
 Nie jest już tajemnicą, że sieci oparte jedynie na PoW są podatne na rozwidlanie. Byliśmy świadkami stworzenia wielu monet, które powstały w wyniku mniejszościowego rozłamu sieci, w tym Ethereum Classic, Bitcoin Gold, Bitcoin Cash i Bitcoin SV.
 
@@ -150,4 +150,9 @@ Jeśli jesteś zainteresowany bardziej złożonymi tematami, możesz zbadać, ja
 Jeśli chcesz wejść w interakcję ze społecznością Decred, wybierz jedną z wymienionych tutaj platform komunikacyjnych. Jesteśmy grupą pragmatycznych ludzi - dołącz do nas!
 
 ### Zasługi
-Ten wpis najprawdopodobniej nie powstałby, gdyby nie [oryginalna analiza tematu autorstwa davecgh](https://www.reddit.com/r/decred/comments/7f9ie1/detailed_analysis_of_decred_fork_resistance/). Ponadto, recenzja tego wpisu autorstwa [Artikozel](https://medium.com/@artikozel), oraz konstruktywne komentarze ze strony użytkowników na naszym kanale pisarskim niesamowicie ulepszyły jego jakość. Ilustracja owego scenariusza została stworzone przez [Zubair Zia](https://medium.com/@zubairzia). Dziękuję Wam wszystkim!
+Ten wpis najprawdopodobniej nie powstałby, gdyby nie [oryginalna analiza tematu autorstwa davecgh](https://www.reddit.com/r/decred/comments/7f9ie1/detailed_analysis_of_decred_fork_resistance/). Ponadto, recenzja tego wpisu autorstwa [Artikozel](https://medium.com/@artikozel), oraz konstruktywne komentarze ze strony użytkowników na naszym kanale pisarskim niesamowicie ulepszyły jego jakość. Ilustracja owego scenariusza została stworzona przez [Zubair Zia](https://medium.com/@zubairzia). Dziękuję Wam wszystkim!
+
+
+[Tekst ukazał się 12. grudnia 2018 r.                                
+Źródło: https://medium.com/decred/detailed-analysis-of-decred-fork-resistance-93022e0bcde7                        
+Tłumaczenie: kozel (@artikozel)]
