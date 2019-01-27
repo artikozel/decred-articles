@@ -124,4 +124,4 @@ As above, this comes from my own personal beliefs that I have tried to instill i
 
 **S:** We’re always open to listing new products on Crypto Emporium. We’re always looking for strategic partnerships. Business owners or even personal sellers, we treat everyone the same and judge each case on its own merits. We’ll support the sale of your products to our network of clients and on our social media channels. We welcome all business owners to contact us and see if we can’t work together.
 
-**A:** Stephen, it has been a genuine pleasure having you on. I'm keeping my fingers crossed for your success, and I hope the rest of the Decred community does too. Thanks for talking to us.
+**A: Stephen, it has been a genuine pleasure having you on. I'm keeping my fingers crossed for your success, and I hope the rest of the Decred community does too. Thanks for talking to us.**
