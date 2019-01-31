@@ -6,7 +6,7 @@ Our today's guest is **Stephen**, founder of the luxury goods outlet  **Cryptoem
 
 **Artikozel: First of all, let's start with the obvious. What was it that attracted you to crypto in the first place? What were your personal crypto beginnings like?**
 
-**Stephen:** My introduction to cryptocurrency came in 2016. It was during this time that I was researching fintech for potential solutions on a proposed P2P lending marketplace I was looking to have built. This was my first introduction to cryptocurrencies and the blockchain technology behind it. It was the advantages of the distributed ledger that had the potential disrupt so many industries that really caught my attention.
+**Stephen:** My introduction to cryptocurrency came in 2016. It was during this time that I was researching fintech for potential solutions on a proposed P2P lending marketplace I was looking to have built. This was my first introduction to cryptocurrencies and the blockchain technology behind it. It was the advantages of the distributed ledger that had the potential to disrupt so many industries that really caught my attention.
 
 After deciding to take the plunge and purchase my first Bitcoin I used the coming months to familiarise myself with the market and with the technology. It wasn’t until 2017 that I decided that this was something I wanted to get much more heavily involved with and I saw the opening in the market for a more consumer based solution.
 
@@ -62,7 +62,7 @@ One of the main challenges that we’ve have encountered so far is the volatilit
 
 **A: Being the world's first crypto-only retail store you are surely an expert on the matter. How big, would you say, is crypto shopping today, what is the trend, and where do you see it going in the future based on past data?**
 
-Being the world’s first crypto-only retail store is something that we’re immensely proud of. I knew when we launched Crypto Emporium the massive potential that crypto-commerce had. As I mentioned earlier, the benefits to transacting using cryptocurrency are numerous, none more than the ability to attract a global audience, something that even Amazon struggled to do for many years. I believe our project is unique in the fact that we are actively looking for a way to consumerise cryptocurrencies, I believe this to be the next step in forwarding real-world adoption.
+**S:** Being the world’s first crypto-only retail store is something that we’re immensely proud of. I knew when we launched Crypto Emporium the massive potential that crypto-commerce had. As I mentioned earlier, the benefits to transacting using cryptocurrency are numerous, none more than the ability to attract a global audience, something that even Amazon struggled to do for many years. I believe our project is unique in the fact that we are actively looking for a way to consumerise cryptocurrencies, I believe this to be the next step in forwarding real-world adoption.
 
 Despite 2018 proving to be a remarkably difficult year for cryptocurrencies. We’re still just at at the very beginning. The global e-commerce market is growing exponentially. In 2017, retail e-commerce sales worldwide amounted to approximately $2.3 trillion, and e-commerce revenues are projected to grow to $4.88 trillion by 2021. If we’re able to tap into just a small percent of that as we continue our expansion, then we’ll be in a very healthy position. Our business is evolving and constantly trying to meet the needs of the market. It’s hugely important for Crypto Emporium to be able to become a cost effective solution. As the visionary in the field of crypto-commerce, it’s not our responsibility to compare ourselves with other crypto-commerce websites, it’s our responsibility to target the greater e-commerce market. That is what we hope to achieve over the coming years.
 
@@ -114,7 +114,7 @@ I couldn’t sit here and tell you that if the previous 12 months was a bull mar
 
 **A: Personally, I have to admit there are some things, like the work ethos and willingness to keep your nose to the grindstone through tough times and market conditions that both you and Decred share. What is your secret to staying positive and active despite various hardships?**
 
-As above, this comes from my own personal beliefs that I have tried to instill into the company. It’s important to show resilience and unwavering positivity even in the toughest times. There’s a lesson in every hardship and this ongoing bear market is no different. As I am sure Decred have also experienced, it’s actually times like this that you learn the most about your business. It’s about using the experience positively. We know that the blockchain revolution is a train that will not be stopped in the long-run, this certainly helps our optimistic outlook.
+**S:** As above, this comes from my own personal beliefs that I have tried to instill into the company. It’s important to show resilience and unwavering positivity even in the toughest times. There’s a lesson in every hardship and this ongoing bear market is no different. As I am sure Decred have also experienced, it’s actually times like this that you learn the most about your business. It’s about using the experience positively. We know that the blockchain revolution is a train that will not be stopped in the long-run, this certainly helps our optimistic outlook.
 
 **A: You have recently announced that you were going to put the brands, whose products you offer, and customers directly in touch. Some would see this as trying to put oneself out of business through a clear conflict of interest, since you are the liaison between customer and brand. Is there a piece of the puzzle not immediately obvious to the eye?**
 
@@ -125,3 +125,6 @@ As above, this comes from my own personal beliefs that I have tried to instill i
 **S:** We’re always open to listing new products on Crypto Emporium. We’re always looking for strategic partnerships. Business owners or even personal sellers, we treat everyone the same and judge each case on its own merits. We’ll support the sale of your products to our network of clients and on our social media channels. We welcome all business owners to contact us and see if we can’t work together.
 
 **A: Stephen, it has been a genuine pleasure having you on. I'm keeping my fingers crossed for your success, and I hope the rest of the Decred community does too. Thanks for talking to us.**
+
+
+*Thanks to @bee for the review.*
