@@ -1,8 +1,8 @@
 ## Jak dostać pracę jako współpracownik Decred
 
 
-![](../../img/howtogethired1.png)
-
+![](/img/howtogethired1.png)
+aaaa
 
 This article explains the details of how to become a Decred contractor. One of the most important questions is: why would you like to work with Decred? In most cases, people dream of financial freedom and see blockchains and digital currencies as their way up. Others want more autonomy in how they schedule their work, or would love to work remotely while traveling the world. Code enthusiast may get excited about Decred's innovative blockchain, written entirely in Go (golang). Whatever your reason is: consider how you want to contribute, communicate this professionally, and work hard for it!
 
