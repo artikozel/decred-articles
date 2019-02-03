@@ -54,3 +54,5 @@ Decred stał się kryptowalutą, która w swojej naturze ma charakter progresywn
 
 ---
 Tekst w oryginalnej publikacji ukazał się na [https://thedecreddigest.com/2017/06/10/decred-where-did-it-all-begin/](https://thedecreddigest.com/2017/06/10/decred-where-did-it-all-begin/).
+
+Tłumaczenie @artikozel.
