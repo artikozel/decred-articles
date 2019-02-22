@@ -152,4 +152,4 @@ Jeśli chcesz wejść w interakcję ze społecznością Decred, wybierz jedną z
 ### Zasługi
 Ten wpis najprawdopodobniej nie powstałby, gdyby nie [oryginalna analiza tematu autorstwa davecgh](https://www.reddit.com/r/decred/comments/7f9ie1/detailed_analysis_of_decred_fork_resistance/). Ponadto, recenzja tego wpisu autorstwa [Artikozel](https://medium.com/@artikozel), oraz konstruktywne komentarze ze strony użytkowników na naszym kanale pisarskim niesamowicie ulepszyły jego jakość. Ilustracja owego scenariusza została stworzone przez [Zubair Zia](https://medium.com/@zubairzia). Dziękuję Wam wszystkim!
 
-Tłumaczenie @artikozel.
+Tłumaczenie @kozel.

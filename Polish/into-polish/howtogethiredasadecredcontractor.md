@@ -7,7 +7,7 @@ W tym artykule wyjaśniamy szczegóły tego, jak można zostać wykonawcą (wsp�
 
 ### Deweloperzy, projektanci, marketerzy: Wszyscy są mile widziani jako współtwórcy Decred
 
-Decred to wyjątkowa i innowacyjna waluta cyfrowa. Jesteśmy wspólnotą ludzi o mocnym etosie pracy, którzy przejęli kontrolę nad swoim życiem cyfrowym i finansowym. Zamiast skupiać się na życiorysach, referencjach i wywiadach, jesteśmy bardziej zainteresowani tym, co potencjalny wykonawca może i będzie robił dla projektu. Oczywiście, podbudowuje nas fakt posiadania mocnych referencji i bogatych w doświadczenia zyciorysów przez ludzi i firmy, lecz jako społeczność ludzi czynu to, co wykonawca w sposób rzeczywisty robi dla projektu, liczy się o wiele bardziej niż jego poprzednie miejsca pracy, czy zaplecze teoretyczne.  Aby zawrzeć to w cytacie:
+Decred to wyjątkowa i innowacyjna waluta cyfrowa. Jesteśmy wspólnotą ludzi o mocnym etosie pracy, którzy przejęli kontrolę nad swoim życiem cyfrowym i finansowym. Zamiast skupiać się na życiorysach, referencjach i wywiadach, jesteśmy bardziej zainteresowani tym, co potencjalny wykonawca może i będzie robił dla projektu. Oczywiście, podbudowuje nas fakt posiadania mocnych referencji i bogatych w doświadczenia życiorysów przez ludzi i firmy, lecz jako społeczność ludzi czynu to, co wykonawca w sposób rzeczywisty robi dla projektu, liczy się o wiele bardziej niż jego poprzednie miejsca pracy, czy zaplecze teoretyczne. Podsumowując to w cytacie:
 
 > "Jesteś tym, co robisz. Człowieka określają jego czyny, a nie wspomnienia.
  –Kuato, 'Pamięć absolutna'
@@ -21,10 +21,11 @@ Rozumiemy, że to, czego Decred potrzebuje, niekoniecznie musi zgadzać się z t
 Aby zostać wykonawcą Decred, typowe jest:
 
 1. Wykazanie niezależnego zainteresowania projektem
-2. Zapoznanie się z podstawami projektu Decred poprzez korzystajanie z jego oprogramowania i lekturę naszej dokumentacji lub innych treści edukacyjnych.
+2. Zapoznanie się z podstawami projektu Decred poprzez korzystanie z jego oprogramowania i lekturę naszej dokumentacji lub innych treści edukacyjnych.
 3. Znalezienie części projektu, w której czujesz, że masz umiejętności, którymi możesz przyczynić się o jego rozwoju.
 4. Skonsultowanie się z zespołem Decred przed rozpoczęciem pracy, aby uniknąć powielania.
 5. Przesłanie efektów swojej pracy do sprawdzenia.
+
 Potencjalni wykonawcy powinni umieć wykonać powyższe czynności przy minimalnym wsparciu ze strony dotychczasowych współpracowników. Chociaż staramy się być możliwie jak najbardziej inkluzywni wobec potencjalnych współpracowników, ważne jest, aby zrozumieć, że musimy utrzymać wewnętrzne standardy efektów pracy, co oznacza, że ​​nie wszystkie zainteresowane strony zostaną poproszone o stanie się wykonawcami Decred.
 
 ![](../../img/howtogethired2.jpeg)
@@ -32,13 +33,13 @@ Potencjalni wykonawcy powinni umieć wykonać powyższe czynności przy minimaln
 
 Decred to projekt typu open source, jednakże, w przeciwieństwie do większości innych projektów tego rodzaju, mamy pewne źródło dochodu, którego używamy, aby na bieżąco opłacać naszych współpracowników, co umożliwia zainteresowanym wykonawcom pracę nad projektem w pełnym wymiarze godzin. Obecnie mamy przyzwoitą mieszankę wykonawców pracujących w niepełnym wymiarze godzin i pełnoetatowych, przy czym większość wykonawców jest zatrudniona w niepełnym wymiarze godzin.
 
-Jeśli chodzi o proces stania się pełnoetatowym kontrahentem, najbezpieczniejszym sposobem zapewnienia tego, że będziemy mieć dobrze dopasowaną, pełnoetatową ekipę jest to, żeby wejście w tę rolę mogło odbywac się stopniowo. Oczekujemy tego, że uczestnik rozpocznie pracę w niepełnym wymiarze godzin, a następnie przejdzie do pracy w pełnym wymiarze po tym, jak wykaże stałe efekty, dobrą etykę pracy i umiejętność współpracy z innymi wykonawcami.
+Jeśli chodzi o proces stania się pełnoetatowym współpracownikiem, najbezpieczniejszym sposobem zapewnienia tego, że będziemy mieć dobrze dopasowaną, pełnoetatową ekipę jest to, żeby wejście w tę rolę mogło odbywać się stopniowo. Oczekujemy tego, że kandydat rozpocznie pracę w niepełnym wymiarze godzin, a następnie przejdzie do pracy w pełnym wymiarze po tym, jak wykaże stałe efekty, dobrą etykę pracy i umiejętność współpracy z innymi wykonawcami.
 
 ### Zasady pracy
 
 W Decred, autorytet i szacunek są zdobywane w miarę upływu czasu poprzez pracę, a nie przyznawane poprzez schlebianie ego, czy zabieganie o względy u ludzi o wyższym statusie. Z zadowoleniem przyjmujemy uczestnictwo wszystkich ludzi, ale nikt nie powinien oczekiwać, że nowe osoby, zaraz po przyjściu, będą mogły rozstawiać ludzi po kątach. Zachęcamy ambitnych wykonawców do poświęcenia czasu na zdobycie uznania innych współpracowników przed próbą zarządzania nimi.
 
-Zauważyliśmy, że istnieje szeroki wachlarz opinii na temat tego, nad czym projekt powinien i nie powinien pracować w danym momencie. Słuchanie i dostosowywanie się do opinii naszych użytkowników jest dla nas ważne, lecz istnieje ogromna nadwyżka pomysłów w stosunku do ludzi, którzy w rozsądny sposób mogą wdrożyć te pomysły w życie. Ze względu na niedobór ludzi działamy zgodnie z zasadą "przynieś własną pracę", która dotyczy rozwoju wraz ze wszystkimi innymi obszarami projektu. Jeśli chcesz, żeby coś zostało zaimplementowane, sam musisz wykonac ku temu pracę lub przekonać innych współpracowników do tego, że Twój pomysł warto wdrożyć.
+Zauważyliśmy, że istnieje szeroki wachlarz opinii na temat tego, nad czym projekt powinien i nie powinien pracować w danym momencie. Słuchanie i dostosowywanie się do opinii naszych użytkowników jest dla nas ważne, lecz istnieje ogromna nadwyżka pomysłów w stosunku do ludzi, którzy w rozsądny sposób mogą wdrożyć te pomysły w życie. Ze względu na niedobór ludzi działamy zgodnie z zasadą „zapewnij własną siłę roboczą”, która dotyczy rozwoju wraz ze wszystkimi innymi obszarami projektu. Jeśli chcesz, żeby coś zostało zaimplementowane, sam musisz wykonać ku temu pracę lub przekonać innych współpracowników do tego, że Twój pomysł warto wdrożyć.
 
 ### Otrzymywanie wynagrodzenia za pracę
 
@@ -53,12 +54,12 @@ Twórcy Decred są rozproszeni po wielu krajach: Stanach Zjednoczonych, Brazylii
 ### Wnioski
 
 Jesteśmy podekscytowani rozszerzeniem puli wykonawców Decred i dalszym budowaniem naszego cyfrowego ekosystemu walutowego. Zachęcamy zainteresowane strony do skontaktowania się z Noah/Haon za pośrednictwem mediów społecznościowych w celu uzyskania dalszych informacji. Jeśli chcesz dodać komentarz, możesz to zrobić w dziale komentarzy.
-Ten artykuł został napisany na podstawie oryginalnego wpisu na blogu: [Decred rekrutuje](https://medium.com/decred/decred-recruiting-a99e80e9ac6a)
+Ten artykuł został napisany na podstawie oryginalnego wpisu na blogu: [Decred rekrutuje](https://github.com/artikozel/decred-articles/blob/master/Polish/into-polish/decredrecruiting.md).
 
-Wydałem także wersję roziniętą, napisaną z myślą o programistach: [Jak dołączyć do zespołu programistów Decred](https://medium.com/@NoahPierau/how-to-join-the-decred-development-team-ad2475d8d99c).
+Wydałem także wersję rozwiniętą, napisaną z myślą o programistach: [Jak dołączyć do zespołu programistów Decred](https://github.com/artikozel/decred-articles/blob/master/Polish/into-polish/howtojointhedecreddevelopmentteam.md).
 
 ---
 
-Tekst autorstwa [@NoahPierau](https://medium.com/@NoahPierau) ukazał się na [medium.com](https://medium.com/decred/how-to-get-hired-as-a-decred-contractor-e1435842df10) 20. stycznia 2018 r.
+Tekst autorstwa [@NoahPierau](https://medium.com/@NoahPierau) ukazał się na [medium.com](https://medium.com/decred/how-to-get-hired-as-a-decred-contractor-e1435842df10) 20 stycznia 2018 r.
 
-Tłumaczenie aut. @artikozel
+Tłumaczenie aut. @kozel
