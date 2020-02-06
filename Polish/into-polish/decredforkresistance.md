@@ -1,4 +1,4 @@
-## Szczegółowa analiza odporności na rozszczepienie łańcucha sieci Decred, aut. Noah Pierau
+## Szczegółowa analiza odporności na rozszczepienie łańcucha sieci Decred
 
 Nie jest już tajemnicą, że sieci oparte jedynie na PoW są podatne na rozwidlanie. Byliśmy świadkami stworzenia wielu monet, które powstały w wyniku mniejszościowego rozłamu sieci, w tym Ethereum Classic, Bitcoin Gold, Bitcoin Cash i Bitcoin SV.
 
@@ -14,7 +14,7 @@ Na każdy blok jest dostępne tylko 20 biletów. Po nabyciu biletu obowiązuje o
 
 Gotowe do głosowania bilety czekają w puli, aby oddać swój głos, a proces selekcji jest niemożliwy do zmanipulowania przez górników PoW. Algorytm, który kontroluje wybór biletów, jest oparty przede wszystkim na haszu poprzedniego bloku, co oznacza, że ​​jest zarówno pseudolosowy, jak i deterministyczny. Jeśli budujesz blok 100 na bloku 99, bilety, które mają być zawarte w bloku 100, są znane każdemu pełnemu węzłowi w sieci. Wybór biletów można zmienić tylko poprzez znalezienie nowego rozwiązania bloku 99 z innym hashem, co z kolei spowodowałoby wybranie nowego zestawu losowych biletów w celu zakwalifikowania ich do głosowania.
 
-W każdym bloku może głosować do 5 biletów. Przynajmniej 3 z 5 głosów muszą być uwzględnione w bloku; w przeciwnym wypadku, blok zostanie odrzucony przez sieć. Nagroda dla górników PoW jest zmniejszona, jeśli uwzględnione są tylko 3 lub 4 głosy, odpowiednio o 40% i 20%, po to, aby zniechęcić górników do ignorowania głosów, żeby próbować w ten sposób ograć system.
+W każdym bloku może głosowac do 5 biletów. Przynajmniej 3 z 5 głosów muszą być uwzględnione w bloku; w przeciwnym wypadku, blok zostanie odrzucony przez sieć. Nagroda dla górników PoW jest zmniejszona, jeśli uwzględnione są tylko 3 lub 4 głosy, odpowiednio o 40% i 20%, po to, aby zniechęcić górników do ignorowania głosów, żeby próbować w ten sposób ograć system.
 
 Ważne jest, aby pamiętać, że interesariusze **muszą być obecni na danej odnodze łańcucha**, gdy ich bilety zostają wybrane. Sam akt nabycia biletu nie oznacza, że ​bilet ​automatycznie głosuje, gdyż Twój portfel (lub Twój usługodawca głosowania [ang. *Voting Service Provider*]) musi oddać Twój głos po wybraniu biletu. To rozróżnienie jest kluczowe, ponieważ oznacza, że na ​​pulę gotowych do głosowania biletów na łańcuchu mniejszościowym w dużej mierze składają się bilety bez prawa do głosu, ponieważ ich właściciele znajdują się na innym łańcuchu.
 
@@ -147,12 +147,9 @@ W tym artykule pokazano, w jaki sposób unikalny, hybrydowy protokół Decred za
 
 Jeśli jesteś zainteresowany bardziej złożonymi tematami, możesz zbadać, jak Decred jest w stanie płynnie ulepszać swoją sieć poprzez [głosowanie nad zmianami w zasadach konsensusu](https://medium.com/decred/blockchain-governance-how-decred-iterates-upon-bitcoin-3cc7030c655e), lub w jaki sposób użytkownicy mogą składać wnioski do [pozałańcuchowego systemu zarządzania zwanego Politeia](https://docs.decred.org/governance/politeia/). Jeśli interesują Cię szczegóły techniczne, zagłęb się w [dokumentację techniczną Decred](https://docs.decred.org/).
 
-Jeśli chcesz wejść w interakcję ze społecznością Decred, wybierz jedną z wymienionych [tutaj](https://decred.org/community/) platform komunikacyjnych. Jesteśmy grupą pragmatycznych ludzi - dołącz do nas!
+Jeśli chcesz wejść w interakcję ze społecznością Decred, wybierz jedną z wymienionych tutaj platform komunikacyjnych. Jesteśmy grupą pragmatycznych ludzi - dołącz do nas!
 
 ### Zasługi
-Ten wpis najprawdopodobniej nie powstałby, gdyby nie [oryginalna analiza tematu autorstwa davecgh](https://www.reddit.com/r/decred/comments/7f9ie1/detailed_analysis_of_decred_fork_resistance/). Ponadto, recenzja tego wpisu autorstwa [Artikozel](https://medium.com/@artikozel), oraz konstruktywne komentarze ze strony użytkowników na naszym kanale pisarskim niesamowicie ulepszyły jego jakość. Ilustracja owego scenariusza została stworzona przez [Zubair Zia](https://medium.com/@zubairzia). Dziękuję Wam wszystkim!
+Ten wpis najprawdopodobniej nie powstałby, gdyby nie [oryginalna analiza tematu autorstwa davecgh](https://www.reddit.com/r/decred/comments/7f9ie1/detailed_analysis_of_decred_fork_resistance/). Ponadto, recenzja tego wpisu autorstwa [Artikozel](https://medium.com/@artikozel), oraz konstruktywne komentarze ze strony użytkowników na naszym kanale pisarskim niesamowicie ulepszyły jego jakość. Ilustracja owego scenariusza została stworzone przez [Zubair Zia](https://medium.com/@zubairzia). Dziękuję Wam wszystkim!
 
-
-[Tekst ukazał się 12. grudnia 2018 r.                                
-Źródło: https://medium.com/decred/detailed-analysis-of-decred-fork-resistance-93022e0bcde7                        
-Tłumaczenie: kozel (@artikozel)]
+Tłumaczenie @kozel.
