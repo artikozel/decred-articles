@@ -1,6 +1,6 @@
-# The Decred Node or: How I Learned to Stop Worrying and Love the Command Line
+# The Decred Node or: How I Learned to Stop Worrying and Love the Command Line
 
-### Part 2?-?setting up TOR on your Raspberry Pi
+### Part 2 - setting up TOR on your Raspberry Pi
 
 Congratulations! It looks like you've survived the first part of the tutorial and you're hungry for more. Good! In this part we will set up TOR on our Raspberry Pi.
 Again, as with many things Decred, there are excellent guides on how to do it, like this one by our Decred developers and this one by Marcelo Martins, which are perfectly fine and were instrumental in helping me configure TOR on my Pi. However,  if you're reading this part of me hopes that you didn't completely hate the detailed and hopefully beginner-friendly approach from the first part.
@@ -20,34 +20,34 @@ After we're done we'll edit the TOR config file. Since this is not our home dire
 
 Run `sudo nano /etc/tor/torrc` to open the file with superuser privileges and edit the top of the file to look something like this:
 
-![](../../img/tor2.png)
+![](../../img/tor2.PNG)
 
 Let's explain what we see here:
 
-`SocksPort 9050`?-?directs network traffic to TOR through this default port for all services on this machine configured to use it. On by default, but it doesn't hurt to put it here also.
+`SocksPort 9050` - directs network traffic to TOR through this default port for all services on this machine configured to use it. On by default, but it doesn't hurt to put it here also.
 
-`SocksPort raspberrypi.local:9050`?-?because we are using this very handy method of accessing our Raspberry Pi on the local network we can do a **cool trick**. Basically, you can use this address and port as a proxy for your Internet browser so that it will route its traffic through TOR without having to use a Tor Browser (which is **still recommended** if you're into this sort of thing because it does a **lot** more than just route your traffic). To do this, you need to find your browser's network setting, which for Firefox looks like this: Options -> Network settings -> Manual proxy configuration
+`SocksPort raspberrypi.local:9050`- because we are using this very handy method of accessing our Raspberry Pi on the local network we can do a **cool trick**. Basically, you can use this address and port as a proxy for your Internet browser so that it will route its traffic through TOR without having to use a Tor Browser (which is **still recommended** if you're into this sort of thing because it does a **lot** more than just route your traffic). To do this, you need to find your browser's network setting, which for Firefox looks like this: Options -> Network settings -> Manual proxy configuration
 
-![](../../img/torproxy.png)
+![](../../img/torproxy.PNG)
 
 which ultimately gets you this result:
 
-![](../../img/torproxy2.png)
+![](../../img/torproxy2.PNG)
 
 
-`RunAsDaemon 1`?-?starts the TOR process in the background.
+`RunAsDaemon 1` - starts the TOR process in the background.
 
-`HiddenServiceDir /var/lib/tor/dcrd`?-? our hidden service directory; we need to specify a directory for our hidden service where TOR will store its **.onion** address and private key. Since the TOR data directory is in `/var/lib/tor`, just adding the name of the directory where we want these files is enough. In my case I used the name `dcrd`.
+`HiddenServiceDir /var/lib/tor/dcrd` - our hidden service directory; we need to specify a directory for our hidden service where TOR will store its **.onion** address and private key. Since the TOR data directory is in `/var/lib/tor`, just adding the name of the directory where we want these files is enough. In my case I used the name `dcrd`.
 
-`HiddenServiceVersion 2`?-?**VERY IMPORTANT**. dcrd **does not support v3 .onion addresses**, so we need to specify that we want a v2 .onion address for our hidden service (16 characters long).
+`HiddenServiceVersion 2`- **VERY IMPORTANT**. dcrd **does not support v3ï¿½.onion addresses**, so we need to specify that we want a v2 .onion address for our hidden service (16 characters long).
 
-`HiddenServicePort 9108 127.0.0.1:9108`?-?redirects requests on port 9108 to our Raspberry Pi's localhost address and port 9108, where our **dcrd** instance is listening for incoming connections.
+`HiddenServicePort 9108 127.0.0.1:9108`- redirects requests on port 9108 to our Raspberry Pi's localhost address and port 9108, where our **dcrd** instance is listening for incoming connections.
 
 Now that we're on the same page, let's save the changes (yes, with `ctrl+x` followed by a `y` and the **enter** key).
 
 After saving the changes in the TOR config file let's **restart the TOR service** with `sudo systemctl restart tor@default.service` so that TOR may generate our **.onion** address and **check its status** with `sudo systemctl status tor@default.service`, which should look something like this:
 
-![](../../img/tor3.png)
+![](../../img/tor3.PNG)
 
 Indeed, our TOR service is running. You can exit this view by hitting `ctrl+c` to bring you back to the prompt.
 
@@ -55,11 +55,11 @@ Now that the TOR service has been restarted, let's check out the **.onion** addr
 
 Run `sudo cat /var/lib/tor/dcrd/hostname`, which will give you the contents of the `hostname` file. It should look all messed up, like a typical **.onion** address, underlined **in green**.
 
-![](../../img/tor4.png)
+![](../../img/tor4.PNG)
 
 **Copy and save this address**, because we will need it in a second.
 
-**Dcrinstall** has made some hidden directories (starting with "**.**"?-?which you can see by including the **-a** argument with the **ls** command) for Decred daemons in our home directory. This is where Decred software stores its files and config files.
+**Dcrinstall** has made some hidden directories (starting with "**.**" - which you can see by including the **-a** argument with the **ls** command) for Decred daemons in our home directory. This is where Decred software stores its files and config files.
 
 We will now read and alter the contents of the **dcrd.conf** file which resides in the hidden **.dcrd** directory by running the following command
 
@@ -67,7 +67,7 @@ We will now read and alter the contents of the **dcrd.conf** file which resides 
 
 and, once again, editing the top of the file to look something like this:
 
-![](../../img/tor5.png)
+![](../../img/tor5.PNG)
 
 #### Now a word or two about the `proxy` and `onion` lines.
 
@@ -111,7 +111,7 @@ Because we are using SSH to connect to our Raspberry Pi, any application started
 
 Let's install **tmux** with `sudo apt install tmux`
 
-![](../../img/tor6.png)
+![](../../img/tor6.PNG)
 
 After this is done, for the sake of convenience we will create a script that will create a **tmux** session with **dcrd** running inside it and attach to it.
 
@@ -129,7 +129,7 @@ Sometimes the attaching step doesn't work and you might get a false-negative "no
 
 Finally, after toling in the command line for what surely must have felt like forever, we are rewarded with this glorious sight
 
-![](../../img/tor7.png)
+![](../../img/tor7.PNG)
 
 , which serves as proof that we have **successfully set up a dcrd node**.
 
@@ -137,7 +137,7 @@ Now it's time to give yourself a well-deserved rest and give your node ample tim
 
 Final confirmation of things working as intended is when you start seeing inbound connections like these:
 
-![](../../img/tor8.png)
+![](../../img/tor8.PNG)
 
 With a **dcrd** node set up in this fashion you can close your SSH session without worrying that your node will shut down. On a related note, I think it goes without saying that your Raspberry Pi needs to remain connected to power in order to keep  working, but in the event you do need to switch it off, please do the following:
 
