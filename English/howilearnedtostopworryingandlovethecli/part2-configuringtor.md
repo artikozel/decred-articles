@@ -39,7 +39,7 @@ which ultimately gets you this result:
 
 `HiddenServiceDir /var/lib/tor/dcrd` - our hidden service directory; we need to specify a directory for our hidden service where TOR will store its **.onion** address and private key. Since the TOR data directory is in `/var/lib/tor`, just adding the name of the directory where we want these files is enough. In my case I used the name `dcrd`.
 
-`HiddenServiceVersion 2`- **VERY IMPORTANT**. dcrd **does not support v3�.onion addresses**, so we need to specify that we want a v2 .onion address for our hidden service (16 characters long).
+`HiddenServiceVersion 2`- **VERY IMPORTANT**. dcrd **does not support v3 .onion addresses**, so we need to specify that we want a v2 .onion address for our hidden service (16 characters long).
 
 `HiddenServicePort 9108 127.0.0.1:9108`- redirects requests on port 9108 to our Raspberry Pi's localhost address and port 9108, where our **dcrd** instance is listening for incoming connections.
 
