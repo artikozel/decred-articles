@@ -69,27 +69,28 @@ and, once again, editing the top of the file to look something like this:
 
 ![](../../img/tor5.PNG)
 
+For now ignore the lines with a hashtag in front of them, as they are temporarily disabled.
+
 #### Now a word or two about the `proxy` and `onion` lines.
 
 At the beginning of this part I mentioned that maximising the benefit to the Decred network will be my priority. With TOR there are two paths you can follow:
 
-- the `proxy` route will make your node behave like as a TOR client. It will check for new blocks, transactions and synchronise over the TOR network. If you want your node to be **anonymous** then **this is the option you should choose**, and your **dcrd.conf** file should look like this:
+- the `proxy` flag by itself would make your node behave like as a TOR client, **but** since we took the time to set up a hidden service we will also be able to accept connections from others connecting to the Decred network through TOR. In short, our node will check for new blocks, transactions and synchronise over the TOR network and act as a peer for other anonymous TOR **dcrd** nodes. If you want your node to be **anonymous** then **this is the option you should choose**, and your **dcrd.conf** file should look like this:
 
 ```[Application Options]
 
 proxy=127.0.0.1:9050
-listen=
-externalip=a3q7hg3jsizqhxqo.onion
+listen=127.0.0.1
+externalip=nxnw3bdlwbe5kl7k.onion
 torisolation=1
 ```
 
-- the `onion` route, however, makes your node act as a bridge between the TOR network and traffic over regular Internet, as is an example of a client-server setup. As a result, your own node's traffic **will not** be anonymous, but the benefit of that is that **both** the clearnet and the TOR nodes can connect to your node as peers. I feel that out of the two options this affects the network in the most positive way, so this is the route I will go, and my **dcrd.conf** file will look like this:
+- the `onion` route, like the one above, is also an example of a client-server setup, which makes your node act as a bridge between the TOR network and traffic over regular Internet.  As a result, your own node's traffic **will not** be anonymous, but the benefit of that is that **both** the clearnet and the TOR nodes can connect to your node as peers, and your node accepts the TOR connections via TOR, and regular ones via clearnet. Even at the cost of this node's anonymity, I feel that out of the two options this one affects the network in the most positive way, so this is the route I will go, and my **dcrd.conf** file will look like this:
 
 ```[Application Options]
 
 onion=127.0.0.1:9050
-listen=
-externalip=a3q7hg3jsizqhxqo.onion
+externalip=nxnw3bdlwbe5kl7k.onion
 torisolation=1
 ```
 
@@ -97,9 +98,9 @@ The **dcrd.conf** file has this to say about the `listen` argument:
 
 > Specifying a proxy will disable listening for incoming connections unless listen addresses are provided via the 'listen' option.
 
-Therefore, if you pick the `proxy` path, you need it for **dcrd** to listen for incoming connections. Personally, even though it is not required, I left the `listen` argument in even for the `onion` path, as I found that it helps with node visibility if your setup requires port forwarding.
+Therefore, if you pick the `proxy` path, you need it for **dcrd** to listen for incoming connections, because the proxy path disables this function by default. You need to specify the localhost address of your Pi, `127.0.0.1`, so that it only listens for connections originating from and sent to that address.
 
-In both options connections over TOR should be coming thanks to specifying the `externalip` argument and setting it to the **.onion** address you acquired a moment ago.
+In both options connections over TOR should be coming to our node thanks to specifying the `externalip` argument and setting it to the **.onion** address you acquired a moment ago.
 
 The `torisolation` argument, to quote our docs once more:
 
@@ -139,6 +140,11 @@ Final confirmation of things working as intended is when you start seeing inboun
 
 ![](../../img/tor8.PNG)
 
+Do not worry if you don't start seeing them quickly, though, as in the words of @davecgh
+
+> even if everything is configured properly, you won't see inbound conns for several days on average.
+The network is intentionally designed to favor nodes that have a track record over new nodes to help prevent things like a bad actor firing up a bunch of malicious nodes with the intent to sybil.
+
 With a **dcrd** node set up in this fashion you can close your SSH session without worrying that your node will shut down. On a related note, I think it goes without saying that your Raspberry Pi needs to remain connected to power in order to keep  working, but in the event you do need to switch it off, please do the following:
 
 - log into your Pi
@@ -157,4 +163,4 @@ Thanks to @jz for writing the now-classic guide for setting up solo staking and 
 
 Thanks to @karamble for showing me that the Decred experience does not end at GUI wallets.
 
-Thanks to @Exitus for very helpful feedback on the draft.
+Thanks to @Exitus for very helpful feedback on the draft and the folks in our #writers room for comments and explanation on all things Decred.
