@@ -5,7 +5,6 @@
 Congratulations! It looks like you've survived the first part of the tutorial and you're hungry for more. Good! In this part we will set up TOR on our Raspberry Pi.
 Again, as with many things Decred, there are excellent guides on how to do it, like this one by our Decred developers and this one by Marcelo Martins, which are perfectly fine and were instrumental in helping me configure TOR on my Pi. However,  if you're reading this part of me hopes that you didn't completely hate the detailed and hopefully beginner-friendly approach from the first part.
 
-
 While installing and using TOR with **dcrd** is easier than you might think, our devs ask us to consider taking the time to set up a TOR hidden service for our node so that we can help out the Decred network even more, and since maximising the benefit to the Decred network is my priority for this tutorial, this is exactly what we will do.
 
 Let's begin with downloading and installing TOR. Run the following command and follow the on-screen instructions:
