@@ -2,9 +2,9 @@
 
 ### Part 1 - setting up dcrd on your Raspberry Pi
 
-There comes a moment when once you're deep enough down a rabbit hole an initial simple interest turns into genuine fascination that springs you into more than just passive observation and awakens the desire to learn more and do something useful - you actually want to contribute. However, if, like me, you're not a developer capable of contributing code, or don't think you can help out in one of many other ways the Decred Project welcomes, then a simple act of running a Decred node can reliably scratch that itch of making a small, but measurable contribution to the network.
+There comes a moment when once you're deep enough down a rabbit hole an initial simple interest turns into genuine fascination that springs you into more than just passive observation and awakens the desire to learn more and do something useful – you actually want to contribute. However, if, like me, you're not a developer capable of contributing code, or don't think you can help out in one of many other ways the Decred Project welcomes, then a simple act of running a Decred node can reliably scratch that itch of making a small, but measurable contribution to the network.
 
-Why would you want to run a Decred node? Not only is it a great way to learn the very basics of using Linux, a great skill to have and one which can potentially take you down a path to playing around with some more complex systems and applications, like running your own voting nodes thus eliminating the need for using a Voting Service Provider or countless others, but also benefits the network in a tangible way by performing a valuable service only at the cost of your hardware purchase and time. Also, the price to pay for running a node is very small as the Decred blockchain is only several GB in size as compared to several hundred in the case of Bitcoin, which means that you will be fine even when running your setup from a micro SD card. Personally, I got hooked in because the satisfaction I got from setting up this kind of digital creation is a very strong dopamine injection, and I hope you will find this to be true for you as well.
+Why would you want to run a Decred node? Not only is it a great way to learn the very basics of using Linux – a great skill to have and one which can potentially take you down a path to playing around with some more complex systems and applications, such as running your own voting nodes, thus eliminating the need for using a Voting Service Provider or countless others – it also benefits the network in a tangible way by performing a valuable service only at the cost of your hardware purchase and time. Also, the price to pay for running a node is very small as the Decred blockchain is only several GB in size as compared to several hundred in the case of Bitcoin, which means that you will be fine even when running your setup from a micro SD card. Personally, I got hooked in because the satisfaction I got from setting up this kind of digital creation is a very strong dopamine injection, and I hope you will find this to be true for you as well.
 
 ### The idea
 
@@ -24,7 +24,7 @@ You will need to download and install [**balenaEtcher**](https://www.balena.io/e
 
 ![](../../img/setup1.PNG)
 
-Currently, Raspberry Pi OS is available in the 32bit version, with the 64bit version in beta. Choose whichever version you prefer, with desktop, or without and download it; personally I'm going for the *Lite* variant with no desktop environment.
+Currently, Raspberry Pi OS is available in the 32bit version, with the 64bit version in beta. Choose whichever version you prefer: with desktop, or without, and download it. Personally I'm going for the *Lite* variant with no desktop environment.
 
 Let's get to it.
 
@@ -36,7 +36,7 @@ After you've downloaded your OS image, insert your micro SD card into the reader
 
 ![](../../img/setup3.PNG)
 
-Now you may need to eject your micro SD card and plug it back in for your computer to recognize it once more(at least I did) so we can proceed to **enabling SSH** straight from boot.
+Now, you may need to eject your micro SD card and plug it back in for your computer to recognize it once more (at least I did) so we can proceed to **enabling SSH** straight from boot.
 
 Open the new drive that (re)appears go to it and **create an empty file named ssh with no filetype extension**. You may need to enable filetype extension visibility in your explorer window so you can edit them. It is located under the "view" tab, roughly as depicted, if you're a Windows 10 user.
 
@@ -65,7 +65,7 @@ network={
 }
 ```
 
-This is a **very** delicate procedure, because this file is ridiculously finicky about formatting. Let me explain visually:
+This is a **very** delicate procedure, because this file is ridiculously finicky about formatting. Let me explain it visually:
 
 ![](../../img/setup6.PNG)
 
@@ -73,7 +73,7 @@ This is a **very** delicate procedure, because this file is ridiculously finicky
 
 Provide all the necessary information and **remember to put your SSID and password in double quotes**. Save the file, and **make sure you eject the microSD card safely** instead of just pulling it out.
 
-At the end of the day, even if you mess this up you can still SSH into your Raspberry Pi via Ethernet cable or hook it up to a screen and keyboard and enable your WiFi without the hassle.
+At the end of the day, even if you mess this up, you can still SSH into your Raspberry Pi via Ethernet cable or hook it up to a screen and keyboard and enable your WiFi without the hassle.
 
 ### 2. Connecting to your Raspberry Pi via SSH and updating your system
 
@@ -84,11 +84,11 @@ First, open your SSH client of choice (like PuTTY). I will be using the Windows 
 ```
 ssh pi@raspberrypi.local
 ```
-, which is one of many names or local addresses you can refer to your Pi by, and you will be greeted with a screen that looks like this.
+, which is one of many names or local addresses you can refer to your Pi by. Then, you will be greeted with a screen that looks like this.
 
 ![](../../img/setup7.PNG)
 
-Since this is the first time you're connecting remotely to this machine your machine doesn't know it, and so you must confirm that you want to continue, and when you do your computer will add the Pi to the list of known hosts and you will not see this notification again.
+Since this is the first time you're connecting remotely to this machine, your machine doesn't recognise it. Therefore, you must confirm that you want to continue. When you continue, your computer will add the Pi to the list of known hosts and you will not see this notification again.
 
 Time to log in. The default user on a Raspberry Pi is **pi**, and the default password is **raspberry**. After you log in the system will tell you about the necessity of changing your default user password, **which you should absolutely do** by doing
 
@@ -102,13 +102,13 @@ and following on-screen instructions.
 
 ### (OPTIONAL) A quick note about basic operations and use of Linux.
 
-Since we are now logged into our machine and we're using a non-graphical user interface for many this will be a very alien experience, but remember one thing - **don't panic**.
+Since we are now logged into our machine and we're using a non-graphical user interface, for many new users this will be a very alien experience, but remember one thing – **don't panic**.
 
 ![](../../img/setup9.PNG)
 
 This little guy, the **"$"** sign a.k.a **the prompt**, is your friend. The whole setup tells you which user you are logged in as (in this case the user **pi**), the hostname you're logged into (**raspberrypi**), and where you currently are (**~**, one of the ways of referring to the user's **home directory**). 
 
-One thing which tripped me up at the very beginning is what a successful operation often looks like in Linux - most of the time there is no confirmation that we did something successfully, like moved to a given directory without issues, which is something we understand while using a GUI. After all, there's not pat on the shoulder for a job well done when clicking a file in a GUI environment, but at least for me the lack of something like a reassuring message was something I needed to get over in a text-based environment. Now it just makes sense, and **as long as you're not making mistakes your system will not yell at you**.
+One thing which tripped me up at the very beginning is what a successful operation often looks like in Linux; most of the time there is no confirmation that we did something successfully, such as moving to a given directory without issues, which is something we normally understand while using a GUI. After all, there's not pat on the shoulder for a job well done when clicking a file in a GUI environment, but at least for me the lack of something like a reassuring message was something I needed to get over in a text-based environment. Now it just makes sense, and **as long as you're not making mistakes your system will not yell at you**.
 
 In the tutorial we will be moving around our system, visiting different directories, with the use of the **cd** command to **c**hange **d**irectory. For example, let me move somewhere from our home directory with
 
@@ -125,13 +125,13 @@ You see? My prompt always keeps track of where I currently am. Let's have a look
 
 Whoa, that's a lot of files, and that's not even the whole list! Remember, **don't panic**. 
 
-In this tutorial we will be using our home directory to navigate from and it is where we will create a lot of directories for our files and software, and the easiest way to return there, for example if you get a bit lost, is to just use the **cd** command without specifying where you want to go, and it will always take you home.
+In this tutorial we will be using our home directory to navigate from. It is also where we will create a lot of directories for our files and software. The easiest way to return to our home directory – for example, if you get a bit lost – is to just use the **cd** command without specifying where you want to go, and it will always take you home.
 
 ![](../../img/setup12.PNG)
 
 Another command we will be using from time to time is the **sudo** command, which allows us to execute other commands with **superuser privileges**, which are kind of like administrator rights, often in situations that require us to change or access existing system files.
 
-There are tons of resources on the basics of Linux, so many, in fact, that I won't even bother linking to any of them, as after searching for "Linux basics" it is hard not to trip over valuable and useful information on this topic. It is highly recommended that you take some extra time to research this topic, as being a Raspberry Pi owner now you are in excellent position to learn some basics of Linux use.
+There are tons of existing resources on the basics of Linux, so many, in fact, that I won't even bother linking to any of them. By merely searching for "Linux basics" it is hard not to trip over valuable and useful information on this topic. It is highly recommended that you take some extra time to research this topic, as being a Raspberry Pi owner now you are in excellent position to learn some basics of Linux use.
 
 Without further ado, it's time to update our system so we're not missing out on any developments. Run
 
@@ -148,7 +148,7 @@ The **sudo** command will sometimes (unless configured otherwise) ask you for yo
 
 ### 3. Downloading our Decred software
 
-Because we're SSHing into our Pi we are free to look things up on our browser, so let's find the most recent version of the Decred software. Go to [**decred.org/wallets/**](https://decred.org/wallets/) and look for **command line-app suite** under **core software** and click **view on GitHub**.
+Because we're SSHing into our Pi, we are free to look things up on our browser, so let's find the most recent version of the Decred software. Go to [**decred.org/wallets/**](https://decred.org/wallets/) and look for **command line-app suite** under **core software** and click **view on GitHub**.
 
 ![](../../img/setup14.PNG)
 
@@ -175,7 +175,7 @@ wget https://github.com/decred/decred-release/releases/download/v1.5.1/dcrinstal
 wget https://github.com/decred/decred-release/releases/download/v1.5.1/dcrinstall-v1.5.1-manifest.txt.asc
 ```
 
-Run **ls -a**, and your home directory should look something like this by point.
+Run **ls -a**, and your home directory should look something like this by this point.
 
 ```
 ls -a
@@ -185,7 +185,7 @@ ls -a
 
 The **-a** argument while running **ls** lists all the files and directories in the given directory, **including the hidden ones**, which we will be seeing in the course of our journey.
 
-In order to verify our software binary file we will need to get hold of the **Decred releases public key**, which is provided in the [**"verifying binaries"**](https://docs.decred.org/advanced/verifying-binaries/) section of the Decred documentation, which we will now to go in order to find this key block
+In order to verify our software binary file, we will need to get hold of the **Decred releases public key**, which is provided in the [**"verifying binaries"**](https://docs.decred.org/advanced/verifying-binaries/) section of the Decred documentation, which we will now go to in order to find this key block
 
 ![](../../img/setup18.PNG)
 
@@ -200,7 +200,7 @@ This will take you to an empty file opened in the nano text editor, to which you
 
 ![](../../img/setup19.PNG)
 
-After we've done that it's time to import the Decred release key into our keyring, so we can use it to check the validity of documents signed with it.
+After we've done that, it's time to import the Decred release key into our keyring, so we can use it to check the validity of documents signed with it.
 We can import the key with the following command
 
 ```
@@ -211,7 +211,7 @@ and get confirmation that the key was successfully imported by running the `gpg 
 
 ![](../../img/setup20.PNG)
 
-In order to verify if we can trust the data in the dcrinstall-v1.5.1-manifest.txt file run the following command:
+In order to verify whether we can trust the data in the dcrinstall-v1.5.1-manifest.txt file, run the following command:
 
 ```
 gpg --verify dcrinstall-v1.5.1-manifest.txt.asc
@@ -225,7 +225,7 @@ Having done that, it's time to see if our binary file checksum matches the one f
 
 ### 4. Installing the Decred software from the binary file
 
-Now that we've got the binary file on our Raspberry Pi we need to make it executable in order to run it. This is done with the command `chmod +x dcrinstall-linux-arm-v1.5.1`, which, if done successfully, should make the binary file turn green, like some of the files we saw earlier in section no. 2, like so:
+Now that we've got the binary file on our Raspberry Pi, we need to make it executable in order to run it. This is done with the command `chmod +x dcrinstall-linux-arm-v1.5.1`, which, if done successfully, should make the binary file turn green, like some of the files we saw earlier in section no. 2, like so:
 
 ![](../../img/setup22.PNG)
 
@@ -236,9 +236,9 @@ You can check it for yourself by running the **ls -a** command.
 
 ![](../../img/setup23.PNG)
 
-`./` put before the name of the executable file or a script is a way to execute it without providing the absolute path to the file - it's enough that you're in the same directory. The same effect could have been achieved by providing the full, absolute path, i.e. `/home/pi/dcrinstall-linux-arm-v1.5.1.`
+`./` placed before the name of the executable file or a script is a way to execute it without providing the absolute path to the file – it's enough that you're in the same directory. The same effect could have been achieved by providing the full, absolute path, i.e. `/home/pi/dcrinstall-linux-arm-v1.5.1.`
 
-After the whole litany of things being done by the installer, if this is your first time installing the Decred software on your machine, you will be asked to provide a private passphrase for your wallet, which **dcrinstall** will also create for you. Since we're just interested in **dcrd** for now we don't need to worry about this step and we can provide any passphrase we'd like. Likewise, we don't need to worry about saving the seed for the wallet, because we're not going to be using one at this point, and should we decide to do so, we can always generate another one, but that's beyond the scope of this particular tutorial. Therefore, let's just follow the on-screen instructions until this step has been completed.
+After the whole litany of things being done by the installer, if this is your first time installing the Decred software on your machine, you will be asked to provide a private passphrase for your wallet, which **dcrinstall** will also create for you. Since we're just interested in **dcrd**, for now we don't need to worry about this step and we can provide any passphrase we'd like. Likewise, we don't need to worry about saving the seed for the wallet, because we're not going to be using one at this point, and should we decide to do so, we can always generate another one – but that's beyond the scope of this particular tutorial. Therefore, let's just follow the on-screen instructions until this step has been completed.
 
 ![](../../img/setup24.PNG)
 
@@ -248,7 +248,7 @@ You will see, with the use of the **ls -a** command, that the Decred installer h
 
 ![](../../img/setup26.PNG)
 
-Is this it? Can we finally start our Decred node? Not so fast! It's probably been a lot to take in, especially if you've never done anything like it before, therefore, before we proceed let's take a short break to appreciate how far we've already come. Apart from that, there's also one more thing that I would like to suggest that you do, which can greatly benefit the Decred project, which is setting up and configuring TOR to run with and alongside our node, which is going to be the focus of part 2 of this series.
+Is this it? Can we finally start our Decred node? Not so fast! It's probably been a lot to take in, especially if you've never done anything like it before. Therefore, before we proceed let's take a short break to appreciate how far we've already come. Apart from that, there's one more thing that I would like to suggest that you do, which can greatly benefit the Decred project: setting up and configuring TOR to run with and alongside our node, which is going to be the focus of part 2 of this series.
 
 
 Thank you for sticking with me, and hopefully see you in part 2!
