@@ -1,11 +1,18 @@
-# The Decred Node or: How I Learned to Stop Worrying and Love the Command Line
+# The Decred Node or: How I Learned to Stop Worrying and Love the Command Line - Part Two
+
+![](../../img/TOR0.PNG)
 
 ### Part 2 - setting up TOR on your Raspberry Pi
 
 Congratulations! It looks like you've survived the first part of the tutorial and you're hungry for more. Good! In this part we will set up TOR on our Raspberry Pi.
-Again, as with many things Decred, there are excellent guides on how to do it, like this one by our Decred developers and this one by Marcelo Martins, which are perfectly fine and were instrumental in helping me configure TOR on my Pi. However,  if you're reading this part of me hopes that you didn't completely hate the detailed and hopefully beginner-friendly approach from the first part.
+Again, as with many things Decred, there are excellent guides on how to do it, like [**this one**](https://github.com/decred/dcrd/blob/master/docs/configuring_tor.md) by our Decred developers and [**this one**](https://stakey.club/en/decred-via-tor-network/) by Marcelo Martins, which are perfectly fine and were instrumental in helping me configure TOR on my Pi. However, if you're reading this, part of me hopes that you didn't completely hate the detailed and hopefully beginner-friendly approach from the first part.
 
 While installing and using TOR with **dcrd** is easier than you might think, our devs ask us to consider taking the time to set up a TOR hidden service for our node so that we can help out the Decred network even more. Since maximising the benefit to the Decred network is my priority for this tutorial, this is exactly what we will do.
+Apart from benefitting the network, learning how to install, configure, and use TOR with your Decred software has measurable benefits to **you**, the user.
+
+You see, the Decred developers saw it fit to make other pieces of the Decred puzzle compatible with TOR. One such example is **politeiavoter**, which lets you trickle in your Politeia votes through the TOR network over a specified period of time within the proposal voting period. This not only enhances your privacy as a stakeholder (should you feel comfortable enough to use your Raspberry Pi node as your Decred wallet in the future) by disassociating your individual votes from your IP address, but also feels like a sign of respect towards the devs who made it possible in the first place.  
+
+To me, having such tools at one's disposal but never bothering to learn how to use them sounds like a huge waste, because I feel that if devs from all around the world take the time to build cool stuff, we can at least appreciate the effort by using it. This is exactly why we're taking this extra step in our Decred journey - to lay the foundations for our potential future uses of this technology.
 
 Let's begin with downloading and installing TOR. Run the following command and follow the on-screen instructions:
 
@@ -13,9 +20,7 @@ Let's begin with downloading and installing TOR. Run the following command and f
 
 ![](../../img/tor1.PNG)
 
-After we're done we'll edit the TOR config file. Since this is not our home directory, where we can change things as we please, in order to write to the file we need to prefix our commando with **sudo**.
-
-
+After we're done we'll edit the TOR config file. Since this is not our home directory, where we can change things as we please, in order to write to the file we need to prefix our command with **sudo**.
 
 Run `sudo nano /etc/tor/torrc` to open the file with superuser privileges and edit the top of the file to look something like this:
 
@@ -25,7 +30,7 @@ Let's explain what we see here:
 
 `SocksPort 9050` – directs network traffic to TOR through this default port for all services on this machine configured to use it. On by default, but it doesn't hurt to put it here also.
 
-`SocksPort raspberrypi.local:9050`– because we are using this very handy method of accessing our Raspberry Pi on the local network, we can do a **cool trick**. Basically, you can use this address and port as a proxy for your Internet browser so that it will route its traffic through TOR without having to use a Tor Browser (which is **still recommended** if you're into this sort of thing because it does a **lot** more than just route your traffic). To do this, you need to find your browser's network setting, which for Firefox looks like this: Options -> Network settings -> Manual proxy configuration
+`SocksPort raspberrypi.local:9050`– because we are using this very handy method of accessing our Raspberry Pi on the local network, we can do a **cool trick**. Basically, you can use this address and port as a proxy for your Internet browser so that it will route its traffic through TOR without having to use a Tor Browser (which is **still recommended** if you're into this sort of thing because it does a **lot** more than just route your traffic. **DO NOT do anything you wouldn't normally do, even when running your browser through a proxy**). To do this, you need to find your browser's network settings, which for Firefox looks like this: Options -> Network settings -> Manual proxy configuration
 
 ![](../../img/torproxy.PNG)
 
@@ -135,7 +140,40 @@ Finally, after toiling in the command line for what surely must have felt like f
 
 Now it's time to give yourself a well-deserved rest and give your node ample time to download the blockchain, which using the simplest Raspberry Pi setup with a microSD card will probably take half a day, so don't feel obliged to stare at the screen while it does its thing.
 
-Final confirmation of things working as intended is when you start seeing inbound connections like these:
+#### Now a word or two about port forwarding.
+
+Since we're using a Raspberry Pi connected to our own home network for this project, there is a very high chance your home network is behind a NAT router. Most such routers are configured not to allow incoming traffic by default in order to protect your home network from outside threats. Unfortunately for us, inbound connections to our Decred node are treated as unsolicited, and therefore perceived as a threat, which almost renders our little experiment in growing the Decred network futile. Thankfully, there is a way around it.
+
+Part 1 of the tutorial mentions **port forwarding**, which is a technique that allows us to redirect the incoming traffic to a specific port on a given machine in our network. Setting up port forwarding is how we open up the port that **dcrd** listens on for connections to the rest of the world.
+
+Please note that **every router is different**, so you may need to consult the instruction manual for your particular make and model of router in order to configure port forwarding properly. The general idea, however, is mostly the same, and I'll show you what it looks like using my home router, a **TP-Link Archer MR200**.
+
+First, access your router. This is usually done by typing an IP address specific to your make and model of router into your browser. You will probably arrive at a login page where you need to provide a password. These passwords are often included on stickers along with the rest of pieces of information required to change your router's settings, such as the aforementioned router IP address.
+
+![](../../img/torrouter1.PNG)
+
+Port forwarding configuration is usually located in the advanced settings section, so click on the **"advanced"** tab if there is one, and look for **NAT** or **port forwarding**.
+
+![](../../img/torrouter2.PNG)
+
+Now, you will want to add a virtual server, like in my case, or configure port forwarding for a specific IP address within your home network.
+
+![](../../img/torrouter3.PNG)
+
+Since using the method that we've been using to access our Raspberry Pi so far will most likely not work here, we need to find out what the IP address of our Pi is within our home network. We can do so by running the `ifconfig` command on our Raspberry Pi. As you know, my Pi is connected to the Internet over WiFi, so I need to look in the **wlan0** section to find out what my Pi's network address is. If you've connected your Raspberry Pi over the Ethernet cable, look for its network address in the **eth0** section.
+
+![](../../img/torrouter4.PNG)
+
+With this piece of information we're ready to set everything up. We can call our port forwarding service anything we want. I called mine **"dcrd"** for simplicity's sake, so that I know exactly what it does.
+The **external port** is the port on our router that inbound connections will try to get through to our node, since port 9108 is the one **dcrd** listens on for connections by default. As a result, to make that connection happen we simply forward the traffic sent to that port on our router to the IP address that our Raspberry Pi is under within our network. Everything should look more or less like in the image below:
+
+![](../../img/torrouter5.PNG)
+
+You can use any of the available port checking services, like [portchecker.co](https://portchecker.co/) to see whether the port is indeed open for incoming connections. Make sure that your **dcrd** is running while checking the port, because if it isn't, it will appear as if the port is closed.
+
+![](../../img/torrouter6.PNG)
+
+Final confirmation of things working as intended is when you start seeing inbound connections like these on your node:
 
 ![](../../img/tor8.PNG)
 
@@ -149,10 +187,14 @@ With a **dcrd** node set up in this fashion you can close your SSH session witho
 - log into your Pi
 - attach to your **dcrd** session
 - shut your **dcrd** session down cleanly with the keyboard shortcut `ctrl+c`
-- shut down your Raspberry Pi with `sudo shutdown 0` before disconnecting it from powered
+- shut down your Raspberry Pi with `sudo shutdown 0` before disconnecting it from power
 
 Always make sure to **cleanly** shut down your **dcrd**, because just powering off your Pi may **corrupt** the blockchain, requiring you to delete it and download it once more.
 
+
+This is the end of the tutorial. If you've come this far, you can congratulate yourself because you've done both yourself and the Decred network a huge service. I hope the journey has been informative and that you've emerged from it with a dose of new found respect and appreciation for the Project and the people behind it.
+
+If you have any questions about this part of the guide or suggestions for improving it, do get in touch with me, @kozel, in our [**Matrix chat**](https://chat.decred.org/). Even if you don't, come and join our community anyway to learn more about [**Decred**](https://decred.org/)!
 
 #### Acknowledgements
 
@@ -163,3 +205,5 @@ Thanks to @jz for writing the now-classic guide for setting up solo staking and 
 Thanks to @karamble for showing me that the Decred experience does not end at GUI wallets.
 
 Thanks to @Exitus for very helpful feedback on the draft and the folks in our #writers room for comments and explanation on all things Decred.
+
+Thanks to [@shjackson](https://github.com/shjackson) for proofreading the draft, providing feedback and improving readability.

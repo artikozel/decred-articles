@@ -1,4 +1,6 @@
-# The Decred Node or: How I Learned to Stop Worrying and Love the Command Line
+# The Decred Node or: How I Learned to Stop Worrying and Love the Command Line - Part One
+
+![](../../img/setup0.PNG)
 
 ### Part 1 - setting up dcrd on your Raspberry Pi
 
@@ -17,6 +19,7 @@ It is also my goal to destigmatize the command-line interface as something regul
 ### The hardware
 
 For our purpose we're going to be using a cheap single-board computer, the popular Raspberry Pi, which can easily run a Decred node. For this tutorial I'm going to be using a [**Raspberry Pi 3 B+**](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/), a **microSD card** (32GB will do just fine), a **micro USB power supply** for the Raspberry Pi, and a **microSD card reader**. It's also good to have an Ethernet cable should anything go wrong with our wireless setup, or if you do not have a WiFi network component wherever you intend to run your node.
+The last thing, which is not strictly part of the node setup itself, but rather an element of your home network, is your router, and more specifically the access to it. We will need access to the router's settings in order to set up **port forwarding**, so that our node can accept connections from other nodes in the Decred network.
 
 ### The software
 
@@ -102,7 +105,7 @@ and following on-screen instructions.
 
 ### (OPTIONAL) A quick note about basic operations and use of Linux.
 
-Since we are now logged into our machine and we're using a non-graphical user interface, for many new users this will be a very alien experience, but remember one thing – **don't panic**.
+Since we are now logged into our machine *and* we're using a non-graphical user interface, for many new users this will be a very alien experience, but remember one thing – **don't panic**.
 
 ![](../../img/setup9.PNG)
 
@@ -211,7 +214,7 @@ and get confirmation that the key was successfully imported by running the `gpg 
 
 ![](../../img/setup20.PNG)
 
-In order to verify whether we can trust the data in the dcrinstall-v1.5.1-manifest.txt file, run the following command:
+In order to verify whether we can trust the data in the **dcrinstall-v1.5.1-manifest.txt** file, run the following command:
 
 ```
 gpg --verify dcrinstall-v1.5.1-manifest.txt.asc
@@ -221,26 +224,23 @@ GPG will assume the signature pertains to the **dcrinstall-v1.5.1-manifest.txt**
 
 Having done that, it's time to see if our binary file checksum matches the one from the manifest, which conclusively proves that the binary came from the Decred team and not a malicious third party. We will do that by running `sha256sum dcrinstall-linux-arm-v1.5.1` and running `cat dcrinstall-v1.5.1-manifest.txt` immediately after to see if the checksums from our version of the installer and the manifest match, as seen below.
 
-![](../../img/setup21.PNG)
+![](../../img/setup22.PNG)
 
 ### 4. Installing the Decred software from the binary file
 
 Now that we've got the binary file on our Raspberry Pi, we need to make it executable in order to run it. This is done with the command `chmod +x dcrinstall-linux-arm-v1.5.1`, which, if done successfully, should make the binary file turn green, like some of the files we saw earlier in section no. 2, like so:
 
-![](../../img/setup22.PNG)
+![](../../img/setup23.PNG)
 
 You can check it for yourself by running the **ls -a** command.
 
-
 **Green means go**, therefore, without further ado, let's install our Decred software with `./dcrinstall-linux-arm-v1.5.1.`
 
-![](../../img/setup23.PNG)
+![](../../img/setup24.PNG)
 
 `./` placed before the name of the executable file or a script is a way to execute it without providing the absolute path to the file – it's enough that you're in the same directory. The same effect could have been achieved by providing the full, absolute path, i.e. `/home/pi/dcrinstall-linux-arm-v1.5.1.`
 
 After the whole litany of things being done by the installer, if this is your first time installing the Decred software on your machine, you will be asked to provide a private passphrase for your wallet, which **dcrinstall** will also create for you. Since we're just interested in **dcrd**, for now we don't need to worry about this step and we can provide any passphrase we'd like. Likewise, we don't need to worry about saving the seed for the wallet, because we're not going to be using one at this point, and should we decide to do so, we can always generate another one – but that's beyond the scope of this particular tutorial. Therefore, let's just follow the on-screen instructions until this step has been completed.
-
-![](../../img/setup24.PNG)
 
 ![](../../img/setup25.PNG)
 
@@ -252,3 +252,9 @@ Is this it? Can we finally start our Decred node? Not so fast! It's probably bee
 
 
 Thank you for sticking with me, and hopefully see you in part 2!
+
+If you have any questions about this part of the guide or suggestions for improving it, do get in touch with me @kozel in our [**Matrix chat**](https://chat.decred.org/). Even if you don't, come and join our community anyway to learn more about [**Decred**](https://decred.org/)!
+
+#### Acknowledgements
+
+Thanks to [@shjackson](https://github.com/shjackson) for proofreading the draft, providing feedback and improving readability.
