@@ -1,4 +1,4 @@
-# The Decred Node: Back to the Source
+# The Decred Node: Back to the Source - Part One
 
 ![](../../img/sourcetitle.PNG)
 
@@ -267,3 +267,9 @@ Now that you've done that, all the pieces of our Decred software should be able 
 If, for some reason, the script does not automatically attach you to the **dcrwallet** session, you can do this manually with the `tmux at -t dcrwallet` command.
 
 This concludes this part of the tutorial. In the next installment we will go over some basic wallet operations performed in the command line, keeping our node up-to-date, as well as some benefits of using our always-on Decred node on our Raspberry Pi, so stay tuned for more command line goodness!
+
+#### Acknowledgements
+
+Thanks to @jz for writing the now-classic guide for setting up solo staking and hot voting wallets, now the backbone of the [solo proof-of-stake voting](https://docs.decred.org/advanced/solo-proof-of-stake-voting/) section of our docs. Without his guidance none of the Decred Node tutorials would have ever existed.
+
+Thanks to @karamble for showing me that the Decred experience does not end at the graphical user interface.
